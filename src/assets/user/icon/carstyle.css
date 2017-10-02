@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'car';
+  src:  url('fonts/icomoon.eot?sizl2u');
+  src:  url('fonts/icomoon.eot?sizl2u#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?sizl2u') format('truetype'),
+    url('fonts/icomoon.woff?sizl2u') format('woff'),
+    url('fonts/icomoon.svg?sizl2u#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon2-"], [class*=" icon2-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'car' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon2-f:before {
+  content: "\e900";
+  color: #c87323;
+}
+.icon2-service .path1:before {
+  content: "\e901";
+  color: rgb(255, 207, 28);
+}
+.icon2-service .path2:before {
+  content: "\e902";
+  margin-left: -1.1787109375em;
+  color: rgb(42, 42, 42);
+}
+.icon2-service .path3:before {
+  content: "\e903";
+  margin-left: -1.1787109375em;
+  color: rgb(42, 42, 42);
+}
+.icon2-vip .path1:before {
+  content: "\e904";
+  color: rgb(252, 217, 83);
+}
+.icon2-vip .path2:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(68, 68, 68);
+}
+.icon2-vip .path3:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(68, 68, 68);
+}
+.icon2-vip .path4:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(252, 217, 83);
+}
+.icon2-vip .path5:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(68, 68, 68);
+}
+.icon2-vip .path6:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(252, 217, 83);
+}
+.icon2-vip .path7:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(68, 68, 68);
+}
+.icon2-vip .path8:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(252, 217, 83);
+}
+.icon2-vip .path9:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(68, 68, 68);
+}
+.icon2-thecar:before {
+  content: "\e90d";
+  color: #8c8c8c;
+}
+.icon2-money:before {
+  content: "\e90e";
+}
+.icon2-settle:before {
+  content: "\e90f";
+  color: #8a8a8a;
+}
+.icon2-fixed:before {
+  content: "\e910";
+}
+.icon2-milogo:before {
+  content: "\e911";
+  color: #ee892f;
+}
+.icon2-less:before {
+  content: "\e912";
+  color: #3dd5c8;
+}
+.icon2-kind:before {
+  content: "\e913";
+  color: #515151;
+}
+.icon2-car:before {
+  content: "\e914";
+  color: #515151;
+}
+.icon2-index:before {
+  content: "\e915";
+  color: #515151;
+}
+.icon2-user:before {
+  content: "\e916";
+  color: #515151;
+}

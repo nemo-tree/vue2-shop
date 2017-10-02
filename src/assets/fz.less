@@ -1,0 +1,46 @@
+.fz(@name, @px){
+    @{name}: round(@px / 2) * 1px;
+    [data-dpr="2"] & {
+        @{name}: @px * 1px;
+    }
+    [data-dpr="2.5"] & {
+        @{name}: round(@px * 2.5 / 2) * 1px;
+    }
+    [data-dpr="2.75"] & {
+        @{name}: round(@px * 2.75 / 2) * 1px;
+    }
+    [data-dpr="3"] & {
+        @{name}: round(@px / 2 * 3) * 1px
+    }
+    [data-dpr="4"] & {
+        @{name}: @px * 2px;
+    }
+}
+
+@cl:#FFAA00;
+
+
+//section距离上方的距离
+.pt() {
+  padding-top: 6vw;
+}
+.mt() {
+  margin-top: 3vw;
+}
+
+.mb() {
+  margin-bottom: 3vw;
+}
+
+//上边框
+.bt(){
+  border-top-color: rgba(185, 185, 185, .14);
+  border-top-style: solid;
+  .fz(border-top-width,1);
+}
+// 下边框
+.bd(){
+  border-bottom-color: rgba(185, 185, 185, .14);
+  border-bottom-style: solid;
+  .fz(border-bottom-width,1);
+}
