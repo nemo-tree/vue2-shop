@@ -30,13 +30,10 @@ vuex + webStorage 实现了购物车功能,axios拦截,配合路由钩子函数�
 
 ## 待完成
 
-<<<<<<< HEAD
 1. 购物车内编辑(增减商品)
 
 2. 搜索功能
-=======
-![](./intro/GIF.gif)      ![](./intro/gif2.gif)
->>>>>>> f87690709ff8a5585d0092a8f4ca2a635302cad8
+
 
 ## Build Setup
 
@@ -49,7 +46,3 @@ npm run dev
 
 # build for production with minification
 npm run build
-
-
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
