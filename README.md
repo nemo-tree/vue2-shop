@@ -10,6 +10,14 @@ vuex + webStorage 实现了购物车功能,axios拦截,配合路由钩子函数�
 
 该项目带大量详细注释,可作为vuex的练习，但不适合零基础
 
+
+## 预览
+
+![](./static/car.gif)
+
+![](./static/login.gif)
+
+
 ## 经验
 
 1. 事先一定要先想好整个页面组成，怎样去分组件开发，这样在开发阶段会事半功倍
@@ -22,11 +30,11 @@ vuex + webStorage 实现了购物车功能,axios拦截,配合路由钩子函数�
 
 5. 简单的父子通信不需要用vuex
 
-## 预览
+## 待完成
 
-![](./intro/GIF.gif)
+1. 购物车内编辑(增减商品)
 
-![](./intro/GIF2.gif)
+2. 搜索功能
 
 ## Build Setup
 
