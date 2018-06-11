@@ -1,7 +1,7 @@
 <template lang="html">
 
   <div class="nothing">
-    <v-gologin></v-gologin>
+    <v-gologin/>
 
     <div class="nothing-img">
       <img src="../../assets/car/images/cart.svg" alt="">

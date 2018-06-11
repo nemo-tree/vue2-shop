@@ -6,9 +6,9 @@
         <h1 slot="title">购物车</h1>
       </v-header>
       <!-- 根据购物车是否有商品加载不同的组件 -->
-      <v-something v-if="count"></v-something>
-      <v-nothing v-else></v-nothing>
-      <v-footer></v-footer>
+      <v-something v-if="count"/>
+      <v-nothing v-else/>
+      <v-footer/>
     </div>
 </template>
 
@@ -28,18 +28,13 @@ export default {
 
   computed:{
     count(){
-
-
       return this.$store.state.detail.count
-
     }
   },
   mounted(){
     // 防止刷新页面数据为空
     if (this.$store.state.detail.count=="") {
-
-      this.$store.commit('RESET_COUNT');
-
+      this.$store.commit('RESET_COUNT')
     }
   }
 

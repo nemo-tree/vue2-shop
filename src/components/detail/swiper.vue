@@ -1,8 +1,8 @@
 <template lang="html">
     <div class="swiper">
       <mt-swipe :auto="4000">
-        <mt-swipe-item v-for="i in swiper" :key="i.id">
-           <img :src="i.imgSrc">
+        <mt-swipe-item v-for="k in swiper" :key="k.id">
+           <img :src="k.imgSrc">
         </mt-swipe-item>
       </mt-swipe>
       <div class="back" @click="$router.go(-1)">
@@ -14,17 +14,17 @@
 
 <script>
 export default {
-  computed:{
-    swiper(){
-        return this.$store.state.detail.productDatas.swiper
+  computed: {
+    swiper () {
+      return this.$store.state.detail.productDatas.swiper
     }
   }
 }
 </script>
 
 <style lang="less" scoped>
-@import '../../assets/fz.less';
-@import '../../assets/index/style.css';
+@import "../../assets/fz.less";
+@import "../../assets/index/style.css";
 
 .swiper {
   width: 100%;
@@ -32,11 +32,11 @@ export default {
 
   .mint-swipe {
     width: 100%;
-    height:100vw;
+    height: 100vw;
     img {
       display: block;
       width: 100%;
-      height:100%;
+      height: 100%;
     }
   }
 
@@ -46,23 +46,22 @@ export default {
     position: absolute;
     left: 4vw;
     top: 2vw;
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 50%;
     text-align: center;
-      span {
-        display: inline-block;
-        line-height: 7vw;
-        .fz(font-size,40);
-        transform: rotate(-180deg);
-        &::before {
-          color:#fff;
-        }
+    span {
+      display: inline-block;
+      line-height: 7vw;
+      .fz(font-size,40);
+      transform: rotate(-180deg);
+      &::before {
+        color: #fff;
       }
+    }
 
-      &:active {
-        transform: scale(1.3);
-      }
+    &:active {
+      transform: scale(1.3);
+    }
   }
-
 }
 </style>

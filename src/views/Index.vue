@@ -1,15 +1,15 @@
 <template lang="html">
   <!-- 在首页父组件发送http请求,后将数据通过props传递给子组件,可减少请求次数,减少服务器压力 -->
   <div class="index">
-    <v-header></v-header>
-    <v-swiper :swiperData="datas.swiper"></v-swiper>
-    <v-service></v-service>
-    <v-section1 :section1="datas.section1"></v-section1>
-    <v-section2 :section2="datas.section2"></v-section2>
-    <v-section3></v-section3>
-    <v-section4 :section4="datas.section4"></v-section4>
-    <v-baseline></v-baseline>
-    <v-footer></v-footer>
+    <v-header/>
+    <v-swiper :swiperData="datas.swiper"/>
+    <v-service/>
+    <v-section1 :list="datas.section1.list" :banner='datas.section1.banner'/>
+    <v-section2 :list="datas.section2.list" :banner='datas.section2.banner'/>
+    <v-section3/>
+    <v-section4 :list="datas.section4.list" :banner='datas.section4.banner'/>
+    <v-baseline/>
+    <v-footer/>
   </div>
 </template>
 
@@ -38,12 +38,18 @@ export default {
   },
   data() {
     return {
-      datas: '',
-      loading:true
+      datas: {
+        section1:{},
+        section2:{},
+        section3:{},
+        section4:{},
+        swiper:[]
+      },
+      loading: true
     }
   },
+ 
   beforeCreate() {
-
     this.$api({
       method: 'post',
       url: '/index'

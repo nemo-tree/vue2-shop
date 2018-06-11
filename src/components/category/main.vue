@@ -1,8 +1,11 @@
 <template lang="html">
-  <div class="main" v-if="datas">
-    <h2>{{datas.aside[tabIndex].title}}</h2>
+  <div class="main">
+    <h2>{{_datas.title}}</h2>
     <ul>
-      <li v-for="k in datas.aside[tabIndex].list">
+      <li
+         v-for="(k,i) in _datas.list"
+         :key='i'
+      >
         <router-link :to="{name:'详情页'}">
           <img v-lazy="k.imgPath"><span>{{k.title}}</span>
         </router-link>
@@ -14,11 +17,25 @@
 <script>
 import { Lazyload } from 'mint-ui';
 export default {
-  props:['datas'],
-  computed:{
+  props: {
+    datas: {
+      type: Array,
+      default: function () {
+        return []
+      }
+    }
+  },
+  computed: {
     // 获取当前aside栏选择的是第几个
-    tabIndex(){
+    tabIndex () {
       return this.$store.state.category.tabIndex
+    },
+    _datas (){
+      const _datas =  {
+        list:[],
+        title:''
+      }
+      return this.datas[this.tabIndex] || _datas
     }
   }
 }
@@ -30,15 +47,17 @@ export default {
   -webkit-overflow-scrolling: touch;
   flex: 9.8;
   height: 100%;
-  &::-webkit-scrollbar {display:none}
-  >h2 {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  > h2 {
     font-size: 24px;
     padding: 2vw 4vw;
-    color:#333;
+    color: #333;
     letter-spacing: 2px;
     background-color: rgb(247, 247, 247);
   }
-  >ul {
+  > ul {
     width: 100%;
     display: -webkit-flex;
     display: -ms-flex;

@@ -1,7 +1,7 @@
 <template lang="html">
-  <section class="section3" v-if='section3'>
+  <section class="section3">
     <ul class="section3-list">
-      <li v-for="k in section3.list">
+      <li v-for="k in list" :key='k.id'>
         <div class="section3-list-left">
           <h4>{{k.title}}</h4>
           <div class="time">
@@ -20,7 +20,7 @@
       </li>
     </ul>
     <router-link :to="{name:'分类页'}" class="section3-banner">
-      <img v-lazy="section3.banner" alt="">
+      <img v-lazy="banner">
     </router-link>
   </section>
 </template>
@@ -31,7 +31,8 @@ import { Lazyload } from 'mint-ui';
   export default {
     data() {
       return {
-        section3: '',
+        list:[],
+        banner:'',
         dom: [{
           num1: '',
           num2: '',
@@ -54,8 +55,10 @@ import { Lazyload } from 'mint-ui';
     mounted() {
       this.$api({
         url: '/index',
-      }).then((response) => {
-
+      }).then(response => {
+        const resDatas = response.data.section3
+        this.list = resDatas.list
+        this.banner = resDatas.banner
         // 将拿到的时间数据处理成倒计时
         let setTime = ((ending, dom) => {
           let endTime = ending;
@@ -81,20 +84,17 @@ import { Lazyload } from 'mint-ui';
             dom.num1 = minute;
             dom.num2 = second;
             dom.num3 = ms;
+          }, 40)
+        })
 
-          }, 40);
-        });
-        this.section3 = response.data.section3;
         for (let i of this.dom.keys()) {
-          setTime(response.data.section3.list[i].end, this.dom[i]);
-          this.section3.list[i].dom = this.dom[i]
-
+          setTime(resDatas.list[i].end, this.dom[i])
+          this.list[i].dom = this.dom[i]
         }
-        // this.section3.dom = this.dom;
 
       }).catch((error) => {
-        console.log(error);
-      });
+        console.log(error)
+      })
 
 
     }

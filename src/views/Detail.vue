@@ -1,10 +1,10 @@
 <template lang="html">
   <div class="detail">
-    <v-swiper> </v-swiper>
-    <v-chose></v-chose>
-    <v-content></v-content>
-    <v-baseline></v-baseline>
-    <v-footer></v-footer>
+    <v-swiper/>
+    <v-chose/>
+    <v-content/>
+    <v-baseline/>
+    <v-footer/>>
   </div>
 </template>
 

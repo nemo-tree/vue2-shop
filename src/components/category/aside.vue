@@ -1,10 +1,9 @@
 <template lang="html">
-  <aside class="aside" v-if="datas">
+  <aside class="aside">
     <ul>
-      <li v-for="(k,i) in datas.aside" @click='changeTabIndex(i)'>
+      <li v-for="(k,i) in datas" @click='changeTabIndex(i)'>
         <router-link :to="{path:'/category/'+k.title}" :class='{active:i==tabIndex}' >{{k.title}}</router-link>
       </li>
-
     </ul>
 
   </aside>
@@ -12,8 +11,14 @@
 
 <script>
   export default {
-    props:['datas'],
-
+    props: {
+      datas:{
+        type:Array,
+        default:function(){
+          return []
+        }
+      }
+    },
     computed:{
       tabIndex(){
         return this.$store.state.category.tabIndex

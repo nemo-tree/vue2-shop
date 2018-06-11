@@ -6,11 +6,6 @@ vue2.0 + vue-router + vuex + axios + mock.js(模拟数据) + ES6 + less
 
 vuex + webStorage 实现了购物车功能,axios拦截,配合路由钩子函数实现权限控制、登录、登出功能
 
-## 练习
-
-该项目带大量详细注释,可作为vuex的练习，但不适合零基础
-
-
 ## 预览
 
 ![](./static/car.gif)   ![](./static/login.gif)
